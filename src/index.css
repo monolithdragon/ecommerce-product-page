@@ -5,6 +5,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: hsl(26, 100%, 55%);
+    --color-primary-alt: hsl(25, 100%, 94%);
+    --color-neutral-light: hsl(223, 64%, 98%);
+    --color-neutral: hsl(220, 14%, 75%);
+    --color-neutral-dark: hsl(219, 9%, 45%);
+    --color-neutral-very-dark: hsl(220, 13%, 13%);
+  }
+
   html,
   body,
   #root {
