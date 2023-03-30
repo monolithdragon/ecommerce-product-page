@@ -6,13 +6,19 @@ import Cart from 'components/cart';
 import IconButton from 'components/elements/icon_button';
 import Menu from 'components/elements/menu';
 import SvgIcon from 'components/elements/svg_icon';
+import useToggle from 'hooks/useToggle';
 import { menuItems } from 'shared/data/menuItems';
 
 function Navbar() {
+  const [isToggle, onToggle, setIsToggle] = useToggle(false);
+
   return (
     <div className="flex flex-1 items-center">
       <div className="flex flex-1 place-items-center space-x-2 lg:flex-none lg:space-x-0">
-        <IconButton className="p-2 hover:text-skin-neutral-400 focus:text-skin-neutral-400 lg:hidden">
+        <IconButton
+          className="p-2 hover:text-skin-neutral-400 focus:text-skin-neutral-400 lg:hidden"
+          onClick={onToggle}
+        >
           <SvgIcon Icon={MenuIcon} />
         </IconButton>
         <span className="px-2 pb-3 pt-2 lg:px-0">
