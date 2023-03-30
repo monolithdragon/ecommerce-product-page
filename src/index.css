@@ -6,12 +6,12 @@
 
 @layer base {
   :root {
-    --color-primary: hsl(26, 100%, 55%);
-    --color-primary-alt: hsl(25, 100%, 94%);
-    --color-neutral-light: hsl(223, 64%, 98%);
-    --color-neutral: hsl(220, 14%, 75%);
-    --color-neutral-dark: hsl(219, 9%, 45%);
-    --color-neutral-very-dark: hsl(220, 13%, 13%);
+    --color-primary: 26, 100%, 55%;
+    --color-primary-alt: 25, 100%, 94%;
+    --color-neutral-light: 223, 64%, 98%;
+    --color-neutral: 220, 14%, 75%;
+    --color-neutral-dark: 219, 9%, 45%;
+    --color-neutral-very-dark: 220, 13%, 13%;
   }
 
   html,
@@ -24,11 +24,14 @@
   #root {
     max-width: 1440px;
     min-width: 375px;
-    margin: auto;
+    margin-inline: auto;
+    padding-inline: 2rem;
   }
 
   body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 1rem;
+    color: hsl(var(--color-neutral-dark));
+    line-height: 1.5;
   }
 }
