@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useCallback, useState } from "react";
 
 function useToggle(defaultValue: boolean): [boolean, () => void, Dispatch<SetStateAction<boolean>>] {
-  const [isToggle, setIsToggle] = useState(defaultValue);
+  const [isToggle, setIsToggle] = useState<boolean>(defaultValue);
 
   const onToggle = useCallback(() => setIsToggle((prev) => !prev), []);
 
