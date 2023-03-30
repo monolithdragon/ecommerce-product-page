@@ -4,11 +4,11 @@ import { Outlet } from 'react-router-dom';
 
 function AppLayout() {
   return (
-    <div className="container mx-auto grid h-full grid-rows-[60px_1fr] md:grid-rows-[80px_1fr]">
-      <header className="flex items-center border-b">
+    <div className="container mx-auto grid h-full w-full grid-rows-[60px_1fr] md:grid-rows-[90px_1fr] lg:w-4/5">
+      <header className="flex place-content-center px-4 md:border-b md:px-0">
         <Navbar />
       </header>
-      <main className="p-20">
+      <main className="lg:p-20">
         <Outlet />
       </main>
       <footer>
