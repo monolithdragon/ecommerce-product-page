@@ -8,7 +8,7 @@ type MenuProps = {
 
 function Menu({ menuItems }: MenuProps) {
   return (
-    <ul className="flex flex-col gap-10 lg:flex-row">
+    <ul className="flex flex-col gap-4 lg:flex-row lg:gap-10">
       {menuItems.map((menuItem) => (
         <MenuItem key={menuItem.title} menuItem={menuItem} />
       ))}

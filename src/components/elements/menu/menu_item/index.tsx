@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { IMenuItem } from 'shared/interfaces/IMenuItem';
 
 type MenuItemProps = {
@@ -7,17 +7,17 @@ type MenuItemProps = {
 
 function MenuItem({ menuItem }: MenuItemProps) {
   const location = useLocation();
-  const isCurrentPathName = location.pathname === menuItem.path;
+  const isCurrentPathName = location.hash === menuItem.path;
 
   return (
     <li
-      className={`cursor-pointer border-b-[0.3125rem] border-b-transparent py-8 focus-within:border-b-skin-primary focus-within:text-skin-neutral-400 hover:border-b-skin-primary hover:text-skin-neutral-400 ${
-        isCurrentPathName ? 'border-b-skin-primary text-skin-neutral-400' : ''
+      className={`cursor-pointer border-b-transparent focus-within:text-skin-neutral-400 hover:text-skin-neutral-400 lg:border-b-[0.3125rem] lg:py-8 lg:focus-within:border-b-skin-primary lg:hover:border-b-skin-primary ${
+        isCurrentPathName ? 'text-skin-neutral-400 lg:border-b-skin-primary' : ''
       }`}
     >
-      <a href="#" className="outline-none">
+      <Link to={menuItem.path} className="outline-none">
         {menuItem.title}
-      </a>
+      </Link>
     </li>
   );
 }
