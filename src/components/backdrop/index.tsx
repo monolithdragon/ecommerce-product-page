@@ -33,8 +33,11 @@ function Backdrop({ productItem, onClose }: Props) {
       <div className="absolute inset-0 z-[1000] bg-black bg-opacity-75" onClick={onClose}></div>
       <div className="relative">
         <div className="absolute left-1/2 top-0 z-[2000] -translate-x-1/2">
-          <IconButton className="float-right mb-2  flex flex-1 text-white hover:scale-110 hover:text-skin-primary">
-            <SvgIcon Icon={CloseIcon} onClick={onClose} />
+          <IconButton
+            className="float-right mb-2  flex flex-1 text-white hover:scale-110 hover:text-skin-primary"
+            onClick={onClose}
+          >
+            <SvgIcon Icon={CloseIcon} />
           </IconButton>
           <IconButton
             className="absolute left-0 top-1/2 z-[2100] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white p-3 text-skin-neutral-400 hover:text-skin-primary"
