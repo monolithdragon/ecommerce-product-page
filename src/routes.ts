@@ -1,5 +1,5 @@
 import AppLayout from "components/layouts";
-import ProductDetails from "pages/product_details";
+import ProductDetailPage from "pages/product_detail_page";
 import React from "react";
 import { createHashRouter } from "react-router-dom";
 
@@ -10,7 +10,7 @@ export const routes = createHashRouter([
     children: [
       {
         path: '/',
-        element: React.createElement(ProductDetails)
+        element: React.createElement(ProductDetailPage)
       }
     ]
   }
