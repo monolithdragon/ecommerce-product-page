@@ -7,9 +7,10 @@ import { IProduct } from 'shared/interfaces/IProduct';
 
 type ProductImageProps = {
   productItem: IProduct;
+  onOpen: () => void;
 };
 
-function ProductImage({ productItem }: ProductImageProps) {
+function ProductImage({ productItem, onOpen }: ProductImageProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const prevIndex = () => {
@@ -41,6 +42,7 @@ function ProductImage({ productItem }: ProductImageProps) {
         src={productItem.images[selectedIndex]}
         alt="shoes"
         className="aspect-square w-full object-cover md:mx-auto md:w-4/5 md:rounded-xl lg:mx-0 xl:w-full"
+        onClick={onOpen}
       />
       <div className="mt-4 hidden gap-10 lg:grid lg:grid-cols-4">
         {productItem.thumbnails.map((thumbnail, index) => (

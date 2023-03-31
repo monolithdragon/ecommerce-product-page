@@ -32,5 +32,6 @@
     font-size: 1rem;
     color: hsl(var(--color-neutral-dark));
     line-height: 1.5;
+    position: relative;
   }
 }

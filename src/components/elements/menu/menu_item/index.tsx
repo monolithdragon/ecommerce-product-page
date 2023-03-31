@@ -11,7 +11,7 @@ function MenuItem({ menuItem }: MenuItemProps) {
 
   return (
     <li
-      className={`cursor-pointer border-b-transparent focus-within:text-skin-neutral-400 hover:text-skin-neutral-400 lg:border-b-[0.3125rem] lg:py-8 lg:focus-within:border-b-skin-primary lg:hover:border-b-skin-primary ${
+      className={`cursor-pointer border-b-transparent focus-within:text-skin-neutral-400 hover:text-skin-neutral-400 lg:border-b-[0.3125rem] lg:py-[42px] lg:focus-within:border-b-skin-primary lg:hover:border-b-skin-primary ${
         isCurrentPathName ? 'text-skin-neutral-400 lg:border-b-skin-primary' : ''
       }`}
     >

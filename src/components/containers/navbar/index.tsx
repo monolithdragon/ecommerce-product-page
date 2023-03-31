@@ -38,6 +38,7 @@ function Navbar() {
       {isMediaMatches && (
         <div
           className={`${isToggle ? 'absolute inset-0 z-10 bg-black bg-opacity-75' : 'hidden'}`}
+          onClick={() => setIsToggle(false)}
         ></div>
       )}
       <nav
@@ -46,7 +47,6 @@ function Navbar() {
             ? 'absolute bottom-0 left-0 top-0 z-20 w-60 bg-white px-6 py-20'
             : 'hidden flex-1 px-14 lg:z-0 lg:flex xl:px-20'
         }`}
-        onBlur={() => setIsToggle(false)}
       >
         <Menu menuItems={menuItems} />
       </nav>
