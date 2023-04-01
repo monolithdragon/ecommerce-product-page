@@ -28,7 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./screnshots/desktop.png)
+![Desktop empty cart](./screnshots/desktop-empty-cart.png)
+![Desktop full cart](./screnshots/desktop-full-cart.png)
+![Mobile](./screnshots/mobile.png)
+![Mobile sidebar](./screnshots/mobile-sidebar.png)
+![Mobile empty cart](./screnshots/mobile-empty-cart.png)
+![Mobile full cart](./screnshots/mobile-full-cart.png)
+![Backdrop](./screnshots/backdrop.png)
 
 ## My process
 
