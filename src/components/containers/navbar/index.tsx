@@ -1,8 +1,8 @@
 import CloseIcon from 'assets/icons/icon-close.svg';
 import MenuIcon from 'assets/icons/icon-menu.svg';
 import Logo from 'assets/icons/logo.svg';
-import Avatar from 'components/avatar';
-import Cart from 'components/cart';
+import Avatar from 'components/containers/avatar';
+import Cart from 'components/containers/cart';
 import IconButton from 'components/elements/icon_button';
 import Menu from 'components/elements/menu';
 import SvgIcon from 'components/elements/svg_icon';
@@ -22,7 +22,7 @@ function Navbar() {
   }, [isMediaMatches]);
 
   return (
-    <div className="flex flex-1 items-center">
+    <div className="flex flex-1 place-items-center">
       <div className="flex flex-1 place-items-center space-x-2 lg:flex-none lg:space-x-0">
         <IconButton
           className="z-50 p-2 hover:text-skin-neutral-400 focus:text-skin-neutral-400 lg:hidden"
@@ -30,14 +30,14 @@ function Navbar() {
         >
           <SvgIcon Icon={isToggle ? CloseIcon : MenuIcon} />
         </IconButton>
-        <span className="px-2 pb-3 pt-2 lg:px-0">
-          <Logo />
+        <span className="m-3 lg:px-0">
+          <SvgIcon Icon={Logo} height={24} />
         </span>
       </div>
 
       {isMediaMatches && (
         <div
-          className={`${isToggle ? 'absolute inset-0 z-10 bg-black bg-opacity-75' : 'hidden'}`}
+          className={`${isToggle ? 'absolute inset-0 z-20 bg-black bg-opacity-75' : 'hidden'}`}
           onClick={() => setIsToggle(false)}
         ></div>
       )}
